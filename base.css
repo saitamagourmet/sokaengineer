@@ -1,0 +1,112 @@
+body{
+    background-color: #E6FFE9;
+}
+nav ul{
+    display: block;
+    margin: 36px 0 12px;
+    text-align: center;
+}
+nav li, nav a{
+    display: inline;
+}
+nav li{
+    margin: 0 0.4rem;
+}
+nav a{
+    background: transport;
+}
+.logo{
+    text-align: center;
+}
+.tocs1 {
+    margin: 0 auto;
+    color: navy;
+    border: dashed 5px gray;
+    background-color: lightyellow;
+    box-shadow: 0 10px 10px rgba(5, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 15px;
+    max-width:  60%; /* 目次の最大幅 */
+    width: 100%; /* 親要素の幅に適応 */
+    box-sizing: border-box; /* パディングを含めて幅を計算 */
+}
+
+.texxt {
+    margin: 20px auto 0; /* 上下のマージンを設定 */
+    max-width: 60%; /* 目次の最大幅に揃える */
+    width: 100%; /* 親要素の幅に合わせる */
+    box-sizing: border-box; /* パディングを含めた幅計算 */
+    padding: 15px; /* 内側の余白 */
+    overflow-wrap: break-word; /* テキストがはみ出さないようにする */
+    text-align: justify; /* テキストを整列 */
+}
+
+.slider img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.map-container {
+    position: relative;
+    width: 100%; /* 親コンテナに収まる */
+    padding-bottom: 56.25%; /* デフォルトで16:9の比率 */
+    height: 0;
+    overflow: hidden;
+    max-width: 1200px; /* PCでの最大幅を設定 */
+    margin: 0 auto; /* センター揃え */
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* コンテナの幅に合わせる */
+    height: 100%; /* コンテナの高さに合わせる */
+    border: 0; /* 枠線を非表示 */
+}
+/* 基本スタイル（PC用） */
+/* 既存のスタイルが適用されます */
+
+/* PC用スタイル */
+@media (min-width: 1024px) {
+    .map-container {
+        padding-bottom: 50%; /* PC表示時の高さを調整（スライドと同じ比率にする） */
+    }
+}
+
+/* スマホ用スタイル */
+@media (max-width: 768px) {
+    body {
+        background-color: #E6FFE9;
+        font-size: 14px; /* フォントサイズを調整 */
+    }
+
+    .tocs1 {
+        max-width: 100%; /* 幅を画面いっぱいに広げる */
+        padding: 10px; /* 内側の余白を縮小 */
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column; /* 縦並びに変更 */
+        text-align: left; /* 左寄せに変更 */
+    }
+
+    .slider img {
+        width: 100%; /* スライダー画像を画面幅に合わせる */
+        height: auto; /* 高さを自動調整 */
+    }
+
+    #logo img {
+        width: 90%; /* ロゴ画像を縮小 */
+        height: auto;
+    }
+
+    .texxt {
+        max-width: 90%; /* テキストの幅を狭く */
+        margin: 10px auto; /* 上下の余白を調整 */
+    }
+    .map-container {
+        padding-bottom: 75%; /* スマホでは縦長にする */
+    }
+}
