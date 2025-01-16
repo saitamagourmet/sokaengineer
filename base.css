@@ -1,5 +1,6 @@
 body{
     background-color: #E6FFE9;
+    background-image: url('asaminaka.jpeg'); /*背景画像の設定*/
 }
 nav ul{
     display: block;
