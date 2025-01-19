@@ -1,6 +1,10 @@
+.titlecolor{
+    color:yellow;
+    font-size: 60px;
+}
 body{
-    background-color: #E6FFE9;
-    background-image: url('asaminaka.jpeg'); /*背景画像の設定*/
+    background-color: #868fb9;
+    background-image: url(''); /*背景画像の設定*/
 }
 nav ul{
     display: block;
