@@ -1,6 +1,5 @@
 .titlecolor{
     color:yellow;
-    font-size: 60px;
 }
 body{
     background-color: #868fb9;
@@ -82,7 +81,7 @@ nav a{
 /* スマホ用スタイル */
 @media (max-width: 768px) {
     body {
-        background-color: #E6FFE9;
+        background-color: #868fb9;
         font-size: 14px; /* フォントサイズを調整 */
     }
 
