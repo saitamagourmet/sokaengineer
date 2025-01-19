@@ -1,10 +1,33 @@
-.titlecolor{
-    color:yellow;
-}
 body{
-    background-color: #868fb9;
-    background-image: url(''); /*背景画像の設定*/
+    background-color: #E6FFE9;
 }
+@keyframes infinity-scroll-left {
+    from {
+      transform: translateX(0);
+    }
+      to {
+      transform: translateX(-100%);
+    }
+}
+.scroll-infinity__wrap {
+    display: flex;
+    overflow: hidden;
+}
+.scroll-infinity__list {
+    display: flex;
+    list-style: none;
+    padding: 0
+}
+.scroll-infinity__list--left {
+    animation: infinity-scroll-left 80s infinite linear 0.5s both;
+}
+.scroll-infinity__item {
+    width: calc(100vw / 6);
+}
+.scroll-infinity__item>img {
+    width: 100%;
+}
+
 nav ul{
     display: block;
     margin: 36px 0 12px;
@@ -43,6 +66,7 @@ nav a{
     padding: 15px; /* 内側の余白 */
     overflow-wrap: break-word; /* テキストがはみ出さないようにする */
     text-align: justify; /* テキストを整列 */
+    background-color: lightyellow;
 }
 
 .slider img {
@@ -81,7 +105,7 @@ nav a{
 /* スマホ用スタイル */
 @media (max-width: 768px) {
     body {
-        background-color: #868fb9;
+        background-color: #E6FFE9;
         font-size: 14px; /* フォントサイズを調整 */
     }
 
@@ -109,6 +133,7 @@ nav a{
     .texxt {
         max-width: 90%; /* テキストの幅を狭く */
         margin: 10px auto; /* 上下の余白を調整 */
+        background-color: lightyellow;
     }
     .map-container {
         padding-bottom: 75%; /* スマホでは縦長にする */
