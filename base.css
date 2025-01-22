@@ -125,9 +125,8 @@ nav a{
         height: auto; /* 高さを自動調整 */
     }
 
-    .scroll-infinity__item>img {
+    .logo{
         width: 60%;
-        height: 60%;
     }
 
     .texxt {
