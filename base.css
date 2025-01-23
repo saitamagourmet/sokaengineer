@@ -9,22 +9,29 @@ body{
       transform: translateX(-100%);
     }
 }
-.logo__wrap {
+
+_:-ms-lang(x)::-ms-backdrop,
+.s-logo {
+  display: -ms-grid;
+  overflow: hidden;
+}
+
+.s-logo__wrap {
     display: flex;
     overflow: hidden;
 }
-.logo__list {
+.s-logo__list {
     display: flex;
     list-style: none;
     padding: 0
 }
-.logo__list--left {
+.s-logo__list--left {
     animation: infinity-scroll-left 80s infinite linear 0.5s both;
 }
-.logo {
+.s-logo__item {
     width: calc(100vw / 6);
 }
-.logo>img {
+.s-logo__item>img {
     width: 100%;
 }
 
