@@ -26,7 +26,7 @@ body{
     width: calc(100vw / 6);
 }
 .scroll-infinity__item>img {
-    width: 100%;
+    width: 120%;
 }
 
 nav ul{
@@ -141,9 +141,7 @@ nav a{
         width: calc(100vw / 6);
     }
     .scroll-infinity__item>img {
-        width: 80%; /* 画像サイズを調整 */
-        height: auto;
-        margin: 0 auto;
+        width: 100%; /* 画像サイズを調整 */
     }
 
     .texxt {
