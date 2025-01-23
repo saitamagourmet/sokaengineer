@@ -125,10 +125,13 @@ nav a{
         height: auto; /* 高さを自動調整 */
     }
 
-    .logo{
-        width: 40%;
+    .logo img {
+        max-width: 100%; /* 親要素の幅に合わせる */
+        height: auto;    /* 高さを自動調整 */
+        display: block;  /* 中央に整列するように設定 */
+        margin: 0 auto;  /* 中央揃え */
     }
-
+    
     .texxt {
         max-width: 90%; /* テキストの幅を狭く */
         margin: 10px auto; /* 上下の余白を調整 */
