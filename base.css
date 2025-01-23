@@ -138,7 +138,7 @@ nav a{
         animation: infinity-scroll-left 80s infinite linear 0.5s both;
     }
     .scroll-infinity__item {
-        width: calc(200vw / 6);
+        width: calc(350vw / 6);
     }
     .scroll-infinity__item>img {
         width: 100%; /* 画像サイズを調整 */
