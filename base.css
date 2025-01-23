@@ -42,9 +42,7 @@ nav li{
 nav a{
     background: transport;
 }
-.logo{
-    text-align: center;
-}
+
 .tocs1 {
     margin: 0 auto;
     color: navy;
@@ -131,7 +129,7 @@ nav a{
         margin: 0 auto;
     }
 
-    .logo img {
+    .loggo img {
         max-width: 100%; /* 親要素の幅に合わせる */
         height: auto;    /* 高さを自動調整 */
         display: block;  /* 中央に整列するように設定 */
