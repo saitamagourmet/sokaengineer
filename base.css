@@ -10,28 +10,22 @@ body{
     }
 }
 
-_:-ms-lang(x)::-ms-backdrop,
-.s-logo {
-  display: -ms-grid;
-  overflow: hidden;
-}
-
-.s-logo__wrap {
+.scroll-infinity__wrap {
     display: flex;
     overflow: hidden;
 }
-.s-logo__list {
+.scroll-infinity__list {
     display: flex;
     list-style: none;
     padding: 0
 }
-.s-logo__list--left {
+.scroll-infinity__list--left {
     animation: infinity-scroll-left 80s infinite linear 0.5s both;
 }
-.s-logo__item {
+.scroll-infinity__item {
     width: calc(100vw / 6);
 }
-.s-logo__item>img {
+.scroll-infinity__item>img {
     width: 100%;
 }
 
@@ -131,31 +125,25 @@ nav a{
         height: auto; /* 高さを自動調整 */
     }
 
-    @keyframes infinity-scroll-left {
-        from {
-          transform: translateX(0);
-        }
-          to {
-          transform: translateX(-100%);
-        }
-    }
-    .logo__wrap {
+    .scroll-infinity__wrap {
         display: flex;
         overflow: hidden;
     }
-    .logo__list {
+    .scroll-infinity__list {
         display: flex;
         list-style: none;
-        padding: 0
+        padding: 0;
     }
-    .logo__list--left {
+    .scroll-infinity__list--left {
         animation: infinity-scroll-left 80s infinite linear 0.5s both;
     }
-    .logo {
+    .scroll-infinity__item {
         width: calc(100vw / 6);
     }
-    .logo>img {
-        width: 60%;
+    .scroll-infinity__item>img {
+        width: 80%; /* 画像サイズを調整 */
+        height: auto;
+        margin: 0 auto;
     }
 
     .texxt {
