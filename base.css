@@ -124,16 +124,31 @@ nav a{
         height: auto; /* 高さを自動調整 */
     }
 
-    .logo{
-        width: 100%;
-        margin: 0 auto;
+    @keyframes infinity-scroll-left {
+        from {
+          transform: translateX(0);
+        }
+          to {
+          transform: translateX(-100%);
+        }
     }
-
-    .loggo img {
-        max-width: 100%; /* 親要素の幅に合わせる */
-        height: auto;    /* 高さを自動調整 */
-        display: block;  /* 中央に整列するように設定 */
-        margin: 0 auto;  /* 中央揃え */
+    .scroll-infinity__wrap {
+        display: flex;
+        overflow: hidden;
+    }
+    .scroll-infinity__list {
+        display: flex;
+        list-style: none;
+        padding: 0
+    }
+    .scroll-infinity__list--left {
+        animation: infinity-scroll-left 80s infinite linear 0.5s both;
+    }
+    .scroll-infinity__item {
+        width: calc(100vw / 6);
+    }
+    .scroll-infinity__item>img {
+        width: 100%;
     }
     
     .texxt {
