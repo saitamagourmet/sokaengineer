@@ -76,6 +76,13 @@ nav a{
     height: auto;
 }
 
+.kansou img {
+    display: block;
+    width: 75%;
+    height: auto;
+    margin-bottom: 10px; /* 写真間のスペース */
+}
+
 .map-container {
     position: relative;
     width: 100%; /* 親コンテナに収まる */
@@ -144,7 +151,6 @@ nav a{
     }
     .scroll-infinity__item>img {
         width: 100%; /* 画像サイズを調整 */
-        height: 100%;
     }
 
     .texxt {
