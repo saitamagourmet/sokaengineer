@@ -134,6 +134,13 @@ nav a{
         height: auto; /* 高さを自動調整 */
     }
 
+    .kansou img {
+        display: block;
+        width: 75%;
+        height: auto;
+        margin-bottom: 10px; /* 写真間のスペース */
+    }
+    
     .scroll-infinity__wrap {
         display: flex;
         overflow: hidden;
