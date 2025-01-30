@@ -21,7 +21,36 @@
             });
         });
     </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const scrollWrap = document.querySelector(".scroll-infinity__wrap");
+            const scrollLists = document.querySelectorAll(".scroll-infinity__list");
     
+            if (scrollWrap && scrollLists.length > 0) {
+                // 既存のリストを複製して無限スクロールを作る
+                scrollLists.forEach((list) => {
+                    const duplicate = list.cloneNode(true);
+                    scrollWrap.appendChild(duplicate);
+                });
+    
+                let scrollAmount = 0;
+                const scrollSpeed = 0.5; // スクロールの速度（値を大きくすると速くなる）
+    
+                function scrollLoop() {
+                    scrollAmount -= scrollSpeed;
+                    const firstList = scrollWrap.firstElementChild;
+                    if (scrollAmount <= -firstList.offsetWidth) {
+                        scrollAmount = 0; // リスト1つ分スクロールしたらリセット
+                    }
+                    scrollWrap.style.transform = `translateX(${scrollAmount}px)`;
+                    requestAnimationFrame(scrollLoop);
+                }
+    
+                scrollLoop(); // スクロール開始
+            }
+        });
+    </script>
+        
 </head>
 <body>
     <div style="text-align: center">
@@ -148,11 +177,11 @@
         今回はスタンダードなわらじかつ丼を注文しました。普通のカツ丼よりもずっとインパクトがあり、衣もサクサクでジューシーなので最後まで飽きずに食べ続けることができました。フードコートにはわらじかつ丼だけでなく、秩父名物の味噌ポテトや炙り豚味噌丼など様々なグルメを楽しむことができるのでこちらもおすすめとなっています。<br>
         わらじかつを提供しているお店は秩父のあらゆる場所にあるのでぜひ、自分にあった味を見つけてください。
     </p>
-
+ 
     <div class="kansou">
         <img src="warazi.jpeg" alt="メニュー">
     </div>
- 
+
     <h2 id="jump2">２.洋食</h2>
     <h3 id="jump2.1"><p>（１）<a href="https://tabelog.com/saitama/A1103/A110304/11018519/">Cafeレストラン ホット・ベリー 朝産み卵のオムライス</h3></a></p>
     <p>アメリカンカントリーを思わせる店内で、BGMはビートルズを中心に70~80年代の曲が流れています。<br>
