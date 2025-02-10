@@ -34,7 +34,7 @@
                 });
     
                 let scrollAmount = 0;
-                const scrollSpeed = 0.5; // スクロールの速度（値を大きくすると速くなる）
+                const scrollSpeed = 0.9; // スクロールの速度（値を大きくすると速くなる）
     
                 function scrollLoop() {
                     scrollAmount -= scrollSpeed;
@@ -63,13 +63,11 @@
                   <li class="scroll-infinity__item"><a href="https://www.city.soka.saitama.jp/cont/s1002/010/020/030/010/21.html"><img src="soka.jpg" /></a></li>               
                   <li class="scroll-infinity__item"><a href="https://hodosan-ropeway.co.jp/"><img src="yamayama.jpeg" /></a></li>
                   <li class="scroll-infinity__item"><a href="https://www.city.kawagoe.saitama.jp/"><img src="kawagoe.webp" /></a></li>
-                  <li class="scroll-infinity__item"><a href="https://www.aeon-laketown.jp/"></a><img src="laketown.webp" /></a></li>
-                </ul>
-                <ul class="scroll-infinity__list scroll-infinity__list--left">
-                  <li class="scroll-infinity__item"><a href="https://navi.city.chichibu.lg.jp/p_flower/1808/"></a><img src="titibu.jpg" /></a></li>                     
-                  <li class="scroll-infinity__item"><a href="https://www.saitama-arena.co.jp/"></a><img src="tamaari.jpg" /></a></li>
-                  <li class="scroll-infinity__item"><a href="https://www.jalan.net/kankou/sta_990102/"></a><img src="urawa.webp" /></a></li>
-                  <li class="scroll-infinity__item"><a href="http://visit-kasukabe.jp/"></a><img src="kasukabe.jpg" /></a></li>
+                  <li class="scroll-infinity__item"><a href="https://www.aeon-laketown.jp/"><img src="laketown.webp" /></a></li>
+                  <li class="scroll-infinity__item"><a href="https://navi.city.chichibu.lg.jp/p_flower/1808/"><img src="titibu.jpg" /></a></li>                     
+                  <li class="scroll-infinity__item"><a href="https://www.saitama-arena.co.jp/"><img src="tamaari.jpg" /></a></li>
+                  <li class="scroll-infinity__item"><a href="https://www.jalan.net/kankou/sta_990102/"><img src="urawa.webp" /></a></li>
+                  <li class="scroll-infinity__item"><a href="http://visit-kasukabe.jp/"><img src="kasukabe.jpg" /></a></li>
                 </ul>
             </div>
         </div>
@@ -182,6 +180,7 @@
         <img src="warazi.jpeg" alt="メニュー">
     </div>
 
+    <hr>
     <h2 id="jump2">２.洋食</h2>
     <h3 id="jump2.1"><p>（１）<a href="https://tabelog.com/saitama/A1103/A110304/11018519/">Cafeレストラン ホット・ベリー 朝産み卵のオムライス</h3></a></p>
     <p>アメリカンカントリーを思わせる店内で、BGMはビートルズを中心に70~80年代の曲が流れています。<br>
@@ -236,6 +235,7 @@
         <img src="onegai.jpeg" alt="お願い">
     </div>
 
+    <hr>
     <h2 id="jump3">３.韓国料理</h2>
     <h3 id="jump3.1"><p>（１）<a href="https://tabelog.com/saitama/A1102/A110203/11053585/">韓国式チキン プルタッチキン</a></p> </h3>
     <p>新越谷駅西口から徒歩2分のところにある韓国料理店です。このお店ではサムギョプサルや韓国式チキンなど、本場の味を再現した韓国料理を楽しむことができます。<br>
@@ -278,6 +278,7 @@
         </iframe>
     </div>    
 
+    <hr>
     <h2 id="jump4">４.中華料理</h2>
     <h3 id="jump4.1"><p>（１）<a href="https://tabelog.com/saitama/A1102/A110202/11003155/">大味</h3></a></p>
     <p>埼玉県蕨市にある大人気中華料理店です。席数が少ないので並ぶことが多いみたいです。<br>
@@ -334,6 +335,7 @@
         </iframe>
     </div>
 
+    <hr>
     <h2 id="jump5">５.スイーツ</h2>
     <h3 id="jump5.1"><p>（１）<a href="https://tabelog.com/saitama/A1101/A110101/11056799/">世界にひとつだけのケーキcoco 大宮Cocoプリン</h3></a></p>
     <p>Cocoは大宮駅西口から歩いて16分。住宅街の一角にお店をかまえています。
@@ -405,6 +407,7 @@
         <img src="asiyu.jpeg" alt="足湯">
     </div>
 
+    <hr>
     <h2 id="jumpm">６.まとめ</h2>
     <h3 id="jump6.1"><p>（１）要点・注意点</h3></p>
     <p>今回のグルメサイトでは埼玉県のグルメについて説明していきました。
@@ -415,51 +418,63 @@
        この経験から、直接足を運ぶことの大切さを学ぶと同時に自分たちはまだまだ埼玉県について知らないんだということを思い知らされました。<br>
        今回は埼玉のグルメについての紹介でしたが今度は観光スポットやお土産についてのサイトも作成していきたいです。
     </p>
+    <hr>
     <h1>他のグルメを知りたい方はこちら</h1>
 <form id="search-form">
-  <input type="text" id="keyword" placeholder="ラーメン, 焼き肉など">
+  <input type="text" id="keyword" placeholder="料理名を入力">
   <button type="submit">検索</button>
 </form>
 <div id="results"></div>
 Powered by <a href="https://webservice.recruit.co.jp/">ホットペッパーグルメ Webサービス</a>
 
 <script>
-  const API_KEY = "c857f8f80790a31c"; // 定数
-  const API_URL = "https://webservice.recruit.co.jp/hotpepper/gourmet/v1/"; // HTTPSに変更
+    const API_KEY = "c857f8f80790a31c"; // 事前に取得したAPIキー
+    const API_URL = "https://webservice.recruit.co.jp/hotpepper/gourmet/v1/";
   
-  document.getElementById("search-form").addEventListener("submit", async (event) => {
-    console.log("検索ボタンが押されました");
-    event.preventDefault(); // フォーム送信をキャンセル
-
-    const keyword = document.getElementById("keyword").value;
-    document.getElementById("results").innerHTML = "検索中...";
-
-    // CORS回避用のプロキシURL（HTTPSに変更）
-    const proxyUrl = "https://api.allorigins.win/raw?url=";
-    const url = `${proxyUrl}${encodeURIComponent(`${API_URL}?key=${API_KEY}&format=json&keyword=${encodeURIComponent(keyword)}&count=30`)}`;
-
-    try {
-      const response = await fetch(url);
-      if (!response.ok) {
-        throw new Error(`HTTPエラー: ${response.status}`);
+    document.getElementById("search-form").addEventListener("submit", async (event) => {
+      event.preventDefault(); // フォーム送信をキャンセル
+  
+      const keyword = document.getElementById("keyword").value.trim();
+      if (!keyword) {
+        document.getElementById("results").innerHTML = "キーワードを入力してください。";
+        return;
       }
-      const data = await response.json();
-      console.log(data); // レスポンスをコンソールで確認
-      displayResults(data.results.shop); // データを表示する関数
-    } catch (error) {
-      document.getElementById("results").innerHTML = "データ取得に失敗しました。";
-    }
-  });
-
-  function displayResults(shops) {
-    const resultsDiv = document.getElementById("results");
-    resultsDiv.innerHTML = "";
-
-    // 埼玉県で始まる住所の店舗のみをフィルタリング
-    const filteredShops = shops.filter(shop => shop.address.startsWith("埼玉県"));
-
-    if (filteredShops.length > 0) {
-      filteredShops.forEach(shop => {
+  
+      document.getElementById("results").innerHTML = "検索中...";
+  
+      // CORS回避用のプロキシ
+      const proxyUrl = "https://api.allorigins.win/raw?url=";
+  
+      // キーワードに「埼玉」を付加して、埼玉県内の結果が出やすくする
+      const searchQuery = encodeURIComponent(`${keyword} 埼玉`);
+      const requestUrl = `${API_URL}?key=${API_KEY}&format=json&keyword=${searchQuery}&count=30`;
+  
+      try {
+        const response = await fetch(proxyUrl + encodeURIComponent(requestUrl));
+  
+        if (!response.ok) {
+          throw new Error(`HTTPエラー: ${response.status}`);
+        }
+  
+        const data = await response.json();
+        console.log("APIレスポンス:", data); // レスポンス内容をコンソールに表示
+  
+        if (data.results.shop && data.results.shop.length > 0) {
+          displayResults(data.results.shop);
+        } else {
+          document.getElementById("results").innerHTML = "該当するお店が見つかりませんでした。";
+        }
+      } catch (error) {
+        console.error("エラー:", error);
+        document.getElementById("results").innerHTML = "データ取得に失敗しました。";
+      }
+    });
+  
+    function displayResults(shops) {
+      const resultsDiv = document.getElementById("results");
+      resultsDiv.innerHTML = "";
+  
+      shops.forEach(shop => {
         const shopDiv = document.createElement("div");
         shopDiv.innerHTML = `
           <h2>${shop.name}</h2>
@@ -470,11 +485,8 @@ Powered by <a href="https://webservice.recruit.co.jp/">ホットペッパーグ�
         `;
         resultsDiv.appendChild(shopDiv);
       });
-    } else {
-      resultsDiv.innerHTML = "埼玉県内で該当する店舗がありませんでした。";
     }
-  }
-</script>
-   
+  </script>
+  
 </body>
 </html>
