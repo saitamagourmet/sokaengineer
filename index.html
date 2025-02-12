@@ -430,31 +430,28 @@
     </p>
     <div id="map"></div>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxcAIRNMorFkqjEGGSvifJ3Qf0udKmFnk&callback=initMap" async defer></script>
-    <script>    
+    <script>
         function initMap() {
-            // 地図の中心を埼玉県に設定
-            var saitama = { lat: 35.8617, lng: 139.6455 };
-
             var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 10,
-                center: saitama
+                zoom: 10, 
+                center: { lat: 35.8617, lng: 139.6455 } // 埼玉県中央
             });
 
-            // お店の情報リスト
+            var bounds = new google.maps.LatLngBounds(); // 地図の範囲を調整
+
             var locations = [
-                { name: "久良一", lat: 36.0509, lng: 139.5201 },
-                { name: "秩父わらじかつ亭", lat: 35.9904, lng: 139.0810 },
-                { name: "Cafeレストラン ホット・ベリー", lat: 35.9719, lng: 139.3925 },
-                { name: "えいすけ", lat: 35.8398, lng: 139.5518 },
-                { name: "韓国式チキン プルタッチキン", lat: 35.8753, lng: 139.7855 },
-                { name: "TonTonオンギー", lat: 35.9085, lng: 139.6226 },
-                { name: "大味", lat: 35.8281, lng: 139.6932 },
-                { name: "火鍋亭", lat: 35.9089, lng: 139.6236 },
-                { name: "世界にひとつだけのケーキcoco", lat: 35.9042, lng: 139.6116 },
-                { name: "阿左美冷蔵", lat: 36.0845, lng: 139.1119 }
+                { name: "久良一（こうのす川幅うどん）", lat: 36.0509, lng: 139.5201, address: "埼玉県鴻巣市本町5-7-8", image: "men1.jpg", url: "https://tabelog.com/saitama/A1104/A110401/11009882/dtlmenu/" },
+                { name: "秩父わらじかつ亭", lat: 35.9904, lng: 139.0810, address: "埼玉県秩父市野坂町1-16-15", image: "waraji1.jpeg", url: "https://tabelog.com/saitama/A1107/A110701/11044527/" },
+                { name: "Cafeレストラン ホット・ベリー", lat: 35.9719, lng: 139.3925, address: "埼玉県狭山市富士見1-8-6", image: "omu.jpg", url: "https://tabelog.com/saitama/A1103/A110304/11018519/" },
+                { name: "えいすけ（ビーフカツレツ定食）", lat: 35.8398, lng: 139.5518, address: "埼玉県さいたま市中央区下落合2-19-12", image: "katsuretu.jpeg", url: "https://tabelog.com/saitama/A1103/A110302/11035644/" },
+                { name: "韓国式チキン プルタッチキン", lat: 35.8753, lng: 139.7855, address: "埼玉県越谷市南越谷1-13-10", image: "chicken.jpg", url: "https://tabelog.com/saitama/A1102/A110203/11053585/" },
+                { name: "TonTonオンギー", lat: 35.9085, lng: 139.6226, address: "埼玉県さいたま市大宮区仲町1-60", image: "takkarubi.jpg", url: "https://tabelog.com/saitama/A1101/A110101/11035357/" },
+                { name: "大味", lat: 35.8281, lng: 139.6932, address: "埼玉県蕨市中央1-35-2", image: "ebicha.jpeg", url: "https://tabelog.com/saitama/A1102/A110202/11003155/" },
+                { name: "火鍋亭", lat: 35.9089, lng: 139.6236, address: "埼玉県さいたま市大宮区仲町1-18", image: "hinabeniku.jpg", url: "https://tabelog.com/saitama/A1101/A110101/11057297/" },
+                { name: "世界にひとつだけのケーキcoco", lat: 35.9042, lng: 139.6116, address: "埼玉県さいたま市大宮区三橋1-1-1", image: "purin1.jpeg", url: "https://tabelog.com/saitama/A1101/A110101/11056799/" },
+                { name: "阿左美冷蔵", lat: 36.0845, lng: 139.1119, address: "埼玉県秩父郡皆野町金崎27-1", image: "kakigoori1.jpeg", url: "https://tabelog.com/saitama/A1107/A110704/11000259/" }
             ];
 
-            // マーカーを追加
             locations.forEach(function(location) {
                 var marker = new google.maps.Marker({
                     position: { lat: location.lat, lng: location.lng },
@@ -463,13 +460,27 @@
                 });
 
                 var infoWindow = new google.maps.InfoWindow({
-                    content: `<h3>${location.name}</h3>`
+                    content: `
+                        <div style="text-align: center;">
+                            <h3>${location.name}</h3>
+                            <p>${location.address}</p>
+                            <img src="${location.image}" alt="${location.name}" style="width: 200px; height: auto; border-radius: 10px;">
+                            <br>
+                            <a href="${location.url}" target="_blank">詳細を見る</a>
+                        </div>
+                    `
                 });
 
                 marker.addListener('click', function() {
                     infoWindow.open(map, marker);
                 });
+
+                // マップの表示範囲を広げる
+                bounds.extend(marker.position);
             });
+
+            // すべてのピンが入るようにズーム調整
+            map.fitBounds(bounds);
         }
     </script>
 
