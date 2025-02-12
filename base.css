@@ -145,6 +145,13 @@ nav a{
         text-align: left; /* 左寄せに変更 */
     }
 
+    #map {
+        width: 100%;
+        height: 300px;
+        max-width: 1200px;
+        margin: 20px auto;
+        border: 2px solid #ddd;
+    }
     .slider img {
         width: 100%; /* スライダー画像を画面幅に合わせる */
         height: auto; /* 高さを自動調整 */
